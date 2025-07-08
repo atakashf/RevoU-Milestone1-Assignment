@@ -1,0 +1,203 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background-color: #fff;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: #f97316; /* orange */
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+header {
+  background-color: #111;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.nav-link {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.nav-link:focus,
+.nav-link:hover {
+  color: #f97316;
+  outline: none;
+}
+
+main {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.section {
+  margin-bottom: 4rem;
+}
+
+h1, h2, h3 {
+  color: #111;
+  margin-bottom: 1rem;
+}
+
+.home-section h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.home-section p {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.about-section ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.services-container,
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.service-item,
+.project-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  width: 280px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.service-item:hover,
+.project-card:hover {
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.project-card h3 {
+  margin-bottom: 0.5rem;
+}
+
+.project-card p {
+  color: #555;
+}
+
+.contact-section form {
+  max-width: 500px;
+  margin: 0 auto 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-section label {
+  font-weight: 600;
+}
+
+.contact-section input,
+.contact-section textarea {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+.contact-section input:focus,
+.contact-section textarea:focus {
+  border-color: #f97316;
+  outline: none;
+}
+
+.contact-section button {
+  background-color: #f97316;
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  font-size: 1.1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-section button:hover,
+.contact-section button:focus {
+  background-color: #d65a0e;
+  outline: none;
+}
+
+.contact-links {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.contact-links a {
+  margin: 0 1rem;
+  font-weight: 600;
+  color: #f97316;
+}
+
+.contact-links a:hover,
+.contact-links a:focus {
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  background-color: #111;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-list {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .services-container,
+  .projects-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-item,
+  .project-card {
+    width: 90%;
+  }
+}
